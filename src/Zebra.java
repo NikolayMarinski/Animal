@@ -1,2 +1,6 @@
-public class Zebra extends Mammal{
+public class Zebra extends Mammal {
+    @Override
+    public void speak() {
+        System.out.println("Aaaaaa");
+    }
 }

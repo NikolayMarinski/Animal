@@ -1,2 +1,2 @@
-public class HummingBird extends Bird{
+public class HummingBird extends Bird {
 }

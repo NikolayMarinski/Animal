@@ -1,69 +1,48 @@
 public class Animal {
-
     private String name;
-    private String tipe;
+    private AnimalType type;
     private String color;
     private String gender;
     private int age;
-    private String food;
-    private Short numOfLegs;
+    private FoodType food;
+    private short numberOfLegs;
     private boolean isWild;
     private String picture;
     private boolean isFed;
 
-    Animal(){
+    Animal() {
         this.name = "";
-        this.tipe = "";
+        this.type = AnimalType.ANIMAL;
         this.color = "";
         this.gender = "";
         this.age = 0;
-        this.food = "";
-        this.numOfLegs = 0;
+        this.food = FoodType.UNKNOWN;
+        this.numberOfLegs = 0;
         this.isWild = false;
         this.picture = "";
         this.isFed = false;
     }
 
-    Animal(String name, String kind, String color, String gender, int age, String food, Short numOfLegs, boolean isWild, String picture){
+    Animal(String name, AnimalType animalType, String color, String gender, int age, FoodType food, short numberOfLegs, boolean isWild, String picture) {
         this.name = name;
-        this.tipe = kind;
+        this.type = animalType;
         this.color = color;
         this.gender = gender;
         this.age = age;
         this.food = food;
-        this.numOfLegs = numOfLegs;
+        this.numberOfLegs = numberOfLegs;
         this.isWild = isWild;
         this.picture = picture;
         this.isFed = false;
     }
 
-    public  void feed(){
-        isFed = true;
-        System.out.println("");
+    public void feed() {
+        this.isFed = true;
+        System.out.println(this.type + " with name " + this.name + " was fed with " + this.food);
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
+    public void speak() {
+        System.out.println("General animal talking...");
     }
 
     public String getName() {
@@ -74,20 +53,36 @@ public class Animal {
         this.name = name;
     }
 
-    public String getFood() {
-        return food;
+    public String getColor() {
+        return color;
     }
 
-    public void setFood(String food) {
-        this.food = food;
+    public void setColor(String color) {
+        this.color = color;
     }
 
-    public Short getNumOfLegs() {
-        return numOfLegs;
+    public String getGender() {
+        return gender;
     }
 
-    public void setNumOfLegs(Short numOfLegs) {
-        this.numOfLegs = numOfLegs;
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public short getNumberOfLegs() {
+        return numberOfLegs;
+    }
+
+    public void setNumberOfLegs(short numberOfLegs) {
+        this.numberOfLegs = numberOfLegs;
     }
 
     public boolean isWild() {
@@ -104,6 +99,22 @@ public class Animal {
 
     public void setPicture(String picture) {
         this.picture = picture;
+    }
+
+    public AnimalType getType() {
+        return type;
+    }
+
+    public void setType(AnimalType type) {
+        this.type = type;
+    }
+
+    public FoodType getFood() {
+        return food;
+    }
+
+    public void setFood(FoodType food) {
+        this.food = food;
     }
 
     public boolean isFed() {
